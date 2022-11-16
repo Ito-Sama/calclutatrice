@@ -12,6 +12,12 @@
 
 """
 
+#vaiables de Debug !
+l1 = [0,1]
+l2 = [1,0]
+n1,n2 = 0,1
+l3=[]
+
 
 
 def AND(a,b):
@@ -36,10 +42,11 @@ def OR(a,b):
 
 
 def XOR(a,b):
-    if a == b:
-        return 0
-    else:
+    if a != b:
         return 1
+    else:
+        return 0
+
 
 def NOT(a):
     return not a

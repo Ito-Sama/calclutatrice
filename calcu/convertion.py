@@ -11,8 +11,6 @@
 --------------------------
 
 """
-
-
 def conv_int_to_list(n):
     n=str(n)
     l=[]
@@ -25,12 +23,17 @@ def encode(n):
 
     l=[]
 
-    if n != 0:
-    
+    if n == 0:
+        #out_e='0'
+        l = [0]            
+
+        return l #out_e
+
+    else :
         while n > 0:
             m=n%2
             n=n//2
-            l = l + [m]
+            l = [m] + l 
             # out_e=''
             # j=0
 
@@ -39,21 +42,14 @@ def encode(n):
             #     out_e = str(l[0+i]) + out_e
             #     i=i+1
             #     j=j+1
-                    
-
-        return l #out_e
-
-    else :
-        #out_e='0'
-        l = [0]
+       
         return l #out_e
         
 
 
-
 def decode(n):
 
-    n=conv_int_to_list(n)
+    #n=conv_int_to_list(n)
     n.reverse()
     a = 0
 
@@ -63,4 +59,8 @@ def decode(n):
         
 
     return a
+
+# for i in range(16) :
+#     print(encode(i),i)
+
 
