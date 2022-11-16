@@ -1,10 +1,11 @@
 
 
 
+
 """
 --------------------------
     Definitions de toutes
-    les portes logiques 
+    les portes logiques     Fait par Table Hautte#5362 
     utiles pour les 
     opérations de bases
 --------------------------
@@ -35,10 +36,10 @@ def OR(a,b):
 
 
 def XOR(a,b):
-    if a != b:
-        return 1
-    else:
+    if a == b:
         return 0
+    else:
+        return 1
 
 def NOT(a):
     return not a
@@ -60,3 +61,5 @@ def XNOR(a,b):
         return 1
     else:
         return 0
+
+

@@ -1,12 +1,13 @@
 
 
 
+
 """
 --------------------------
     Definitions de toutes
-    les fonctions pour 
+    les fonctions pour                  Fait par Table Hautte#5362
     les conversions
-        binaires
+    binaires
 --------------------------
 
 """
@@ -30,23 +31,23 @@ def encode(n):
             m=n%2
             n=n//2
             l = l + [m]
-            out_e=''
-            j=0
+            # out_e=''
+            # j=0
 
-            for i in range(len(l)):
+            # for i in range(len(l)):
                 
-                out_e = str(l[0+i]) + out_e
-                i=i+1
-                j=j+1
+            #     out_e = str(l[0+i]) + out_e
+            #     i=i+1
+            #     j=j+1
                     
 
-        return out_e
+        return l #out_e
 
     else :
-        out_e='0'
-        return out_e
+        #out_e='0'
+        l = [0]
+        return l #out_e
         
-
 
 
 
@@ -54,9 +55,12 @@ def decode(n):
 
     n=conv_int_to_list(n)
     n.reverse()
+    a = 0
 
     for i in range(len(n)):
         n[i] = n[i]*(2**i)
+        a = n[i] + a    
         
 
-    return n
+    return a
+
