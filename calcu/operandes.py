@@ -1,6 +1,6 @@
 from convertion import encode, decode
 from portes_logiques import *
-import os
+from os import system
 
 
 """
@@ -40,10 +40,10 @@ def adder(n1,n2):
 
     for i in range(len(nv1)-1, -1, -1):                                                                                     #                 
         a = nv1[i]                                                                                                          #
-        b = nv2[i]                                                                                                          #
-        unite = (a and not(b) and not(c)) or (not(a) and b and not(c)) or (not(a) and not(b) and c) or (a and b and c)      #sources : https://sites.google.com/site/sciencesdunumerique/algorithmique/Addition
-        r = [int(unite)] + r                                                                                                #j'avoue j'ai pris cette boucle sur internet mais la variable "unite" et "c" on été
-        c = (a and b) or (b and c) or (a and c)                                                                             #refaite entierement par mes soins donc ça va ^^
+        b = nv2[i]                                                                                                          #sources : https://sites.google.com/site/sciencesdunumerique/algorithmique/Addition
+        unite = (a and not(b) and not(c)) or (not(a) and b and not(c)) or (not(a) and not(b) and c) or (a and b and c)      #j'avoue j'ai pris cette boucle sur internet mais la variable "unite" et "c" on été
+        r = [int(unite)] + r                                                                                                #refaite entierement par mes soins donc ça va ^^
+        c = (a and b) or (b and c) or (a and c)                                                                             #
     r = [int(c)] + r                                                                                                        #
 
     r = decode(r)
@@ -62,4 +62,4 @@ def multiply(n1,n2):
 
 
 
-os.system("pause")
+system("pause")
