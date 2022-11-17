@@ -26,6 +26,12 @@ def AND(a,b):
     else:
         return 0
 
+def AND3(a,b,c):
+    if a == 1 and b == 1 and c ==1:
+        return 1
+    else:
+        return 0
+
 
 def NAND(a,b):
     if a == 1 and b == 1:

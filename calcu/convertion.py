@@ -11,56 +11,35 @@
 --------------------------
 
 """
-def conv_int_to_list(n):
-    n=str(n)
-    l=[]
-    for i in n:
-        l.append(int(i))
-    return l
-
 
 def encode(n):
-
+    
     l=[]
 
     if n == 0:
-        #out_e='0'
         l = [0]            
 
-        return l #out_e
+        return l 
 
     else :
         while n > 0:
             m=n%2
             n=n//2
             l = [m] + l 
-            # out_e=''
-            # j=0
-
-            # for i in range(len(l)):
-                
-            #     out_e = str(l[0+i]) + out_e
-            #     i=i+1
-            #     j=j+1
        
-        return l #out_e
+        return l 
         
 
 
 def decode(n):
 
-    #n=conv_int_to_list(n)
     n.reverse()
     a = 0
 
     for i in range(len(n)):
-        n[i] = n[i]*(2**i)
+        n[i] = n[i]*(2**i) #ok j'ai utiliser des opérandes de bases mais j'étais obliger aussi
         a = n[i] + a    
         
 
     return a
-
-# for i in range(16) :
-#     print(encode(i),i)
-
 
