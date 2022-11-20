@@ -1,18 +1,16 @@
-from convertion import encode, decode
+from convertion import encode, decode, encode2
 from portes_logiques import *
-from os import system
-
 
 """
 -------------------------
-    Full Adder
+    contient les opérandes
+    de bases.
     N'acepte que les     Fait par Table Hautte#5362 
     nombres entiers 
     positifs
 -------------------------
 
 """
-
 
 def conv_int_to_list(n):
     n=str(n)
@@ -61,8 +59,12 @@ def subb(n1,n2):
     c = False
     d = None
 
-    nv1=encode(n1)
-    nv2=encode(n2)
+    nv1=encode2(n1)
+    nv2=encode2(n2)
+
+    
+
+    print(nv1,nv2)
 
     len_nv1 = len(nv1)
     len_nv2 = len(nv2)
@@ -76,9 +78,6 @@ def subb(n1,n2):
         d = len_nv2 - len_nv1
         for i in range(d):
             nv1 = [0] + nv1
-
-
-
 
 
 def multiply(n1,n2):
@@ -98,35 +97,12 @@ def exposant(n1,n2):
     return n1
 
 
-choix = input(">")
+def div(n1,n2):
+    q=0
+    while n1 > n2:
+        n1 -= n2
+        q=add(q,1)
 
-if choix == "add":
-    n1 = int(input(">"))
-    n2 = int(input(">"))
-    print(add(n1,n2))
-elif choix == "mult":
-    n1 = int(input(">"))
-    n2 = int(input(">"))
-    print(multiply(n1,n2))
-elif choix == "exp":
-    n1 = int(input(">"))
-    n2 = int(input(">"))
-    print(exposant(n1,n2))
-elif choix == "encode":
-    print(encode(int(input(">"))))
-elif choix == "decode":
-    print(decode(conv_int_to_list(int(input(">")))))
-else:
-    print("""
-    Calculatrice   (version Beta encore)
+    r=n1
+    return "quotiens",q,"; reste", r
 
-        possibilité : -additionner (add)
-                    -multiplier (mult)
-                    -calculer un exposant (exp)
-
-        bonus : -encoder un nombre entier positif en binaire (encode)
-                -decoder un nombre binaire vers la base 10 (decode)
-    """)
-
-
-system("pause")

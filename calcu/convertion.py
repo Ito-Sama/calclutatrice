@@ -18,7 +18,6 @@ def encode(n):
 
     if n == 0:
         l = [0]            
-
         return l 
 
     else :
@@ -28,6 +27,31 @@ def encode(n):
             l = [m] + l 
        
         return l 
+
+
+
+def encode2(n):
+
+        l=[]
+
+        if n == 0:
+            l = [0]            
+            return l 
+
+        else :
+            while n > 0:
+                m=n%2
+                n=n//2
+
+                if m==1:
+                    m=0
+                else:
+                    m=1
+
+                l = [m] + l 
+        
+            return l 
+
         
 
 
@@ -42,4 +66,3 @@ def decode(n):
         
 
     return a
-
