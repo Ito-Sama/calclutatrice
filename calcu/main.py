@@ -1,5 +1,7 @@
 from operandes import *
 from convertion import *
+from gui import *
+from tkinter import *
 
 print("""
 Calculatrice   (version Beta encore)
@@ -14,6 +16,7 @@ Calculatrice   (version Beta encore)
 
     pour stopper l'appli, tapper "stop"
 """)
+
 
 while True:
     choix = input(">")
@@ -43,6 +46,9 @@ while True:
 
     elif choix == "decode":
         print(decode(conv_int_to_list(int(input(">")))))
+
+    elif choix =="stop":
+        break
 
     else:
         print("""

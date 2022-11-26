@@ -19,6 +19,7 @@ def conv_int_to_list(n):
         l.append(int(i))
     return l
 
+
 def add(n1,n2):
    
     r=[]
@@ -62,10 +63,6 @@ def subb(n1,n2):
     nv1=encode2(n1)
     nv2=encode2(n2)
 
-    
-
-    print(nv1,nv2)
-
     len_nv1 = len(nv1)
     len_nv2 = len(nv2)
 
@@ -78,6 +75,12 @@ def subb(n1,n2):
         d = len_nv2 - len_nv1
         for i in range(d):
             nv1 = [0] + nv1
+    
+        if nv2[0] == 0:
+            nv2 = [1] + nv2
+    
+    
+    nv2[0] = 1
 
 
 def multiply(n1,n2):

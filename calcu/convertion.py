@@ -37,12 +37,10 @@ def encode2(n):
         if n == 0:
             l = [0]            
             return l 
-
         else :
             while n > 0:
                 m=n%2
                 n=n//2
-
                 if m==1:
                     m=0
                 else:
@@ -52,8 +50,6 @@ def encode2(n):
         
             return l 
 
-        
-
 
 def decode(n):
 
@@ -61,7 +57,7 @@ def decode(n):
     a = 0
 
     for i in range(len(n)):
-        n[i] = n[i]*(2**i) #ok j'ai utiliser des opérandes de bases mais j'étais obliger aussi
+        n[i] = n[i]*(2**i) 
         a = n[i] + a    
         
 
