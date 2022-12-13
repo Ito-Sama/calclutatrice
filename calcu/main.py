@@ -10,6 +10,10 @@ print("""
                           -calculer un exposant 
                           -calculer une division euclidienne 
 
+            mode d'emploie : -mettre le premier nombre et valider
+                             -mettre son opérande (+,-,*,/,^) puis valider
+                             -et enfin mettre le deuxieme nombre
+
             bonus : -encoder un nombre entier positif en binaire (encode)
                     -decoder un nombre binaire vers la base 10 (decode)
 
@@ -62,6 +66,11 @@ while True:
                           -multiplier 
                           -calculer un exposant 
                           -calculer une division euclidienne 
+
+            mode d'emploie : -mettre le premier nombre et valider
+                             -mettre son opérande (+,-,*,/,^) puis valider
+                             -et enfin mettre le deuxieme nombre
+
 
             bonus : -encoder un nombre entier positif en binaire (encode)
                     -decoder un nombre binaire vers la base 10 (decode)
