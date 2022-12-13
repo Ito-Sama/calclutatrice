@@ -3,12 +3,12 @@
 
 
 """
---------------------------
+==========================
     Definitions de toutes
     les portes logiques     Fait par Table Hautte#5362 
     utiles pour les 
     opérations de bases
---------------------------
+==========================
 
 """
 
@@ -74,5 +74,3 @@ def XNOR(a,b):
         return 1
     else:
         return 0
-
-

@@ -1,63 +1,67 @@
 from operandes import *
 from convertion import *
-from gui import *
-from tkinter import *
 
 print("""
-Calculatrice   (version Beta encore)
+        Calculatrice   (version Beta encore)
 
-    possibilité : -additionner (add)
-                -multiplier (mult)
-                -calculer un exposant (exp)
-                -calculer une division euclidienne (div)
+            possibilité : -additionner 
+                          -soustraire 
+                          -multiplier 
+                          -calculer un exposant 
+                          -calculer une division euclidienne 
 
-    bonus : -encoder un nombre entier positif en binaire (encode)
-            -decoder un nombre binaire vers la base 10 (decode)
+            bonus : -encoder un nombre entier positif en binaire (encode)
+                    -decoder un nombre binaire vers la base 10 (decode)
 
-    pour stopper l'appli, tapper "stop"
+            pour stopper l'appli, tapper "stop"
 """)
 
 
 while True:
-    choix = input(">")
+    n1 = input(">")
 
-    if choix == "add":
+    if n1 == "encode":
+        c = encode(int(input(">")))
+        print(con_list_to_str(c),end='\n\n')
         n1 = int(input(">"))
-        n2 = int(input(">"))
-        print(add(n1,n2))
 
-    elif choix == "mult":
+    elif n1 == "decode":
+        print(decode(conv_int_to_list(int(input(">")))),end='\n\n')
         n1 = int(input(">"))
-        n2 = int(input(">"))
-        print(multiply(n1,n2))
 
-    elif choix == "exp":
-        n1 = int(input(">"))
-        n2 = int(input(">"))
-        print(exposant(n1,n2))
-
-    elif choix == "div":
-        n1 = int(input(">"))
-        n2 = int(input(">"))
-        print(div(n1,n2))
-
-    elif choix == "encode":
-        print(encode(int(input(">"))))
-
-    elif choix == "decode":
-        print(decode(conv_int_to_list(int(input(">")))))
-
-    elif choix =="stop":
+    elif n1 == "stop":
         break
+
+    n1 = int(n1)
+    choix = input(">")
+    n2 = int(input(">"))
+    
+
+    if choix == "+":  
+        print(add(n1,n2),end='\n\n')
+
+    elif choix == "-":
+        print(subb(n1,n2),end='\n\n')
+
+    elif choix == "*":
+        print(multiply(n1,n2),end='\n\n')
+
+    elif choix == "/":
+        print(div(n1,n2),end='\n\n')
+
+    elif choix == "^":
+        print(exposant(n1,n2),end='\n\n')
+
 
     else:
         print("""
         Calculatrice   (version Beta encore)
 
-            possibilité : -additionner (add)
-                        -multiplier (mult)
-                        -calculer un exposant (exp)
-                        -calculer une division euclidienne (div)
+            possibilité : -additionner 
+                          -soustraire 
+                          -multiplier 
+                          -calculer un exposant 
+                          -calculer une division euclidienne 
 
             bonus : -encoder un nombre entier positif en binaire (encode)
                     -decoder un nombre binaire vers la base 10 (decode)
