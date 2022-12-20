@@ -27,6 +27,14 @@ def con_list_to_str(l): #convertie une liste en une chaine de caractère
         
     print(st)
 
+def conv_list_to_int(l):
+    st=''
+    for i in range(len(l)):
+        st = st + str(l[i])     
+
+    st = int(st)
+    return st
+
 
 def add(n1,n2): #réalise un addition de deux nombres entiers positifs
    
@@ -90,6 +98,8 @@ def exposant(n1,n2): #calcule l'exposant n2 du nombre n1
 
 
 def div(n1,n2): #réalise une division euclidienne de deuc nombres entiers positif (pas fini car à terme, elle donneras le résultat exacte)
+    if n2 == "0":
+        return "on ne peut pas diviser par 0"
     q=0
     while n1 >= n2:
         n1 = subb(n1,n2)
