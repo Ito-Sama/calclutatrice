@@ -78,6 +78,9 @@ def subb(n1,n2): #réalise une addition de deux nombres entiers
 
 def multiply(n1,n2): #realise une multiplication pour deuc nombres entiers positifs
 
+    if n1 == 0 or n2 == 0:
+        return 0
+
     d = n1
     for i in range(n2-1):
         n1 = add(d,n1)
@@ -98,7 +101,7 @@ def exposant(n1,n2): #calcule l'exposant n2 du nombre n1
 
 
 def div(n1,n2): #réalise une division euclidienne de deuc nombres entiers positif (pas fini car à terme, elle donneras le résultat exacte)
-    if n2 == "0":
+    if n2 == 0:
         return "on ne peut pas diviser par 0"
     q=0
     while n1 >= n2:

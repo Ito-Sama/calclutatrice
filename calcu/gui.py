@@ -12,26 +12,47 @@ in2 = 0
 test = False
 operande = ""
 
+
+def main():
+    result= ""
+    calcul = ""
+    if operande == "+":
+        result = str(add(in1,in2))
+        calcul = str(in1) + operande + str(in2) + "="
+        result = calcul + result
+        return result 
+    elif operande == "-":
+        result = str(subb(in1,in2))
+        calcul = str(in1) + operande + str(in2) + "="
+        result = calcul + result
+        return result
+    elif operande == "*":
+        result = str(multiply(in1,in2))
+        calcul = str(in1) + operande + str(in2) + "="
+        result = calcul + result
+        return result
+    elif operande == "/":
+        result = str(div(in1,in2))
+        calcul = str(in1) + operande + str(in2) + "="
+        result = calcul + result
+        return result
+    elif operande == "^":
+        result = str(exposant(in1,in2))
+        calcul = str(in1) + operande + str(in2) + "="
+        result = calcul + result
+        return result
+
 def input_number(n):
-    global in1,in2,ln1,ln2,operande,test,eq
+    global in1,in2,ln1,ln2,operande,test
 
 
     if n == "=":
         test = False
         ln1,ln2 = [],[]
-
-        if operande == "+":
-            return print(add(in1,in2))
-        elif operande == "-":
-            return print(subb(in1,in2)) 
-        elif operande == "*":
-            return print(multiply(in1,in2)) 
-        elif operande == "/":
-            return print(div(in1,in2)) 
-        elif operande == "^":
-            return print(exposant(in1,in2)) 
-        else:
-            return "vous avez oublié une opérande"
+        n=0
+        texteLabel = Label(tk, text = main())
+        texteLabel.pack() 
+        texteLabel = None  
 
     if n == "+" or n == "*" or n == "-" or n == "/" or n == "^" :
         test = True
@@ -96,5 +117,7 @@ BMU.place(x = 0,y = 50)
 BDI.place(x = 0,y = 75)
 BEX.place(x = 17,y = 75)
 #BDEL.place(x = 68, y=50)
+
+
 
 tk.mainloop()
